@@ -12,7 +12,9 @@ This is like a plain object in JS
 
 ## Linked List
 
-Implemented in Java and JS
+**Utilities**
+- Reverse a linked list, iteratively and recursively.
+
 
 ## Doubly Linked List
 
@@ -116,7 +118,11 @@ See code in JS: peak-finding.js
 
 ## DP: Dynamic Programming
 
+- Good for optimization problems
+- Shortest path, min length path, minimize/maxize something
+- Exhosted search -> usually a bad thing because is an exponential time solution, but, in a clever way, with DP, you get 
 - "Careful brute force"
+- Subproblems + "reuse" -> break a problem down into small subproblems, solve them, and reuse the solution of the subproblems
 - Guessing + Recursion + Memoization
 - Shortest path in some DAG (Directly Acycle Graph)
 
@@ -125,8 +131,22 @@ See code in JS: peak-finding.js
 1. Define subproblems
 2. Guess (part of solution)
 3. Relate subproblem solutions
-4. Recurse & Memoization OR build DP table bottom-up
+4. Recurse & Memoization (recursively) OR build DP table bottom-up (interatively, forloops)
 5. Solve the original problem
+
+### Subproblems for string/sequences
+
+There are 3 ways:
+
+1. Suffixes: x[i:] (everything after i) -> O(n)
+2. Prefixes: x[:j] (everything before j, aka last) -> O(n)
+3. Substrings: x[i:j] -> O(n^2)
+
+You **cannot** combine suffixes and prefixes, you pick either one. If you need to combine them, then what you need is a substring
+
+**Resources**:
+- https://www.youtube.com/watch?v=OQ5jsbhAv_M
+- DAG: https://www.google.com/search?q=Directed+Acyclic+Graph&sxsrf=ALeKk036ocivcr503f1vafYJXrqlduCzFA:1605135347139&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjKzLqRy_vsAhVCFVkFHSgfDgAQ_AUoAXoECB8QAw&biw=1920&bih=946#imgrc=9bJolWFhwHo9PM
 
 ### Memoization
 
@@ -156,3 +176,23 @@ const f = () => {
   return f(); // or any other fn, like r()
 };
 ```
+
+---
+
+## Strings
+
+### String Sliding Window
+
+#### Resources
+- Tutorials
+  - https://www.youtube.com/watch?v=MK-NZ4hN7rs
+
+
+--- 
+
+## Algebra
+
+### Vector multiplication
+
+**Resources**:
+- https://erik-engheim.medium.com/why-does-matrix-multiplication-work-the-way-it-does-7a8ed9739254

@@ -1,6 +1,8 @@
 /*
 SOUCES
 - https://www.youtube.com/watch?v=O0By4Zq0OFc
+- https://leetcode.com/problems/reverse-linked-list/
+- https://www.youtube.com/watch?v=S92RuTtt9EE
 */
 
 const LinkedList = require('../data-structures/linked-list');
